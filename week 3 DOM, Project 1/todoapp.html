@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color:#db972a;
+        }
+        .container{
+            height: 50%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+
+        <div>
+            <H1>Todo List</H1>
+        </div>
+        <input type="text" placeholder="enter your todo"></input>
+        <button onclick="addTodo()">Add</button>
+        <div class="top"></div>
+    
+        </div>
+        
+    </body>
+    <script>
+        let ctr=1;
+        function addTodo(){
+            const element=document.querySelector("input");
+            const value=element.value;
+            
+            const newele=document.createElement("div")
+            newele.setAttribute("id",ctr)
+            newele.innerHTML="<div>"+"("+ctr+")."+value+"</div><button onclick='deleteTodo("+ctr+")'>delete</delete>"
+                ctr=ctr+1;
+                document.querySelector(".top").appendChild(newele)
+                
+            }
+            
+            function deleteTodo(index){
+                const element=document.getElementById(index);
+                element.parentNode.removeChild(element);
+                
+            }
+            
+</script>
+</html>

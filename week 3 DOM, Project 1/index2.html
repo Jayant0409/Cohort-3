@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Todo 1</h2>
+        <h2>Todo 2</h2>
+        <h2>todo 3</h2>
+        <button onclick="deleteRandomTodo()">updating todo</button>
+    </body>
+    <script>
+        function deleteRandomTodo() {
+            const element = document.querySelector("h2");
+            element.innerHTML = "something new!!"; 
+            const parentElement=element.parentNode;
+            parentElement.removechild(element);
+             
+
+        }
+    </script>
+</html>

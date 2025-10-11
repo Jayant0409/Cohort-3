@@ -1,0 +1,86 @@
+<!-- 
+<body>
+    <input type="text">
+    <button onclick="addTodo()">add todo</button>
+<script>
+    function addTodo(){
+        const value=document.querySelector("input").value;
+        const spanele=document.createElement("span");
+        const btnele= document.createElement("button");
+        spanele.innerHTML=value;
+        btnele.innerHTML="Delete";
+       ////
+        const divele=document.createElement("div");
+        divele.appendChild(spanele);
+        divele.appendChild(btnele);
+        document.querySelector("body").appendChild(divele);
+        ////
+    }
+
+</script>
+</body>
+
+
+
+<body>
+    <input type="text"></input>
+    <button onclick="addTodo()">Add todo!</button>
+    <script>
+      let todos = [];
+      function addTodo() {
+        todos.push({
+          title: document.querySelector("input").value
+        })
+        render();
+      }
+  
+      function deleteTodo() {
+        
+        render();
+      }
+   
+      function render() {
+        const divel = document.createElement("div");
+        const spanele= document.createElement("span");
+        const btn
+
+        )
+        
+      }
+    </script>
+  </body>
+ -->
+
+
+
+<!-- Revision  -->
+
+<body>
+  <input type="text">
+  <button onclick="Addtodo()">Add Todo</button>
+
+
+
+<script>
+function Addtodo()
+{
+  const value= document.querySelector("input").value;
+  
+const newspan=document.createElement("span");
+const newbutton=document.createElement("button");
+
+newspan.innerHTML = value;
+newbutton.innerHTML="Delete";
+
+const newTodoDiv= document.createElement("div");
+newTodoDiv.appendChild(newspan);
+newTodoDiv.appendChild(newbutton);
+
+  document.querySelector("body").appendChild(newTodoDiv);
+
+
+}
+
+</script>
+
+</body>

@@ -1,0 +1,45 @@
+
+<html>
+<body>
+   
+    <h1>Todo List</h1>
+    <h4>1.Eat</h4>
+    <h4>2.Study</h4>
+    <h4>3.sleep</h4>
+    <div class="todo"></div>
+    <input type="text"></inp;ut>
+    <button onclick="AddTodo()">add todo</button>
+
+</body>
+<script>
+    let ctr=0;
+
+    
+    function AddTodo(){
+
+        const inputElement = document.querySelector("input");
+        const value = inputElement.value;
+
+        const element= document.createElement("div");
+        element.setAttribute("id",ctr)
+        
+     // console.log(value);
+    //  const element1=document.createElement("div")
+     element.innerHTML="<div>"+value+"</div><button onclick='deleteTodo("+ctr+")'>delete</button>"
+     ctr=ctr+1;
+    // element.appendChild("element1")
+    document.querySelector(".todo").appendChild(element);
+    }
+    // AddTodo()
+
+    function deleteTodo(index){
+
+const element2=document.getElementById(index);
+const parentelement=element2.parentNode;
+parentelement.removeChild(element2);
+
+}
+    
+
+</script>
+</html>
