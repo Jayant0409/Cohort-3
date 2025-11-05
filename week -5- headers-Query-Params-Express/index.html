@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Post
+    <div id="posts"></div>
+    
+    <script>
+        async function getRecentPost() {
+            console.log("before sending request")
+            const response = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+            const data = await response.json();
+            console.log("Request has been processed");
+            // const element=document.getElementById("posts")
+            // element.innerHTML=data.body;
+            document.getElementById("posts").innerHTML = JSON.stringify(data)
+            
+
+        }
+        getRecentPost();
+        
+            </script>
+</body>
+</html>
